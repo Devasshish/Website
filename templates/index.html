@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+<!--        <link rel="stylesheet" href="./css/style.css">-->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-left">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-center">
+                    <a href="#" class="logo">
+<!--                        <img src="./img/logo.png" alt="Logo">-->
+                        <img src="{{ MEDIA_URL }}images/example.jpg" alt="Example Image">
+
+                    </a>
+                </div>
+                <div class="navbar-right">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#services">Sweets</a></li>
+                        <li><a href="#services">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="home container" id="home">
+            <div class="home-image">
+                <img src="#" alt="home-image">
+            </div>
+            <div class="home-content">
+                <h3>Since 2008</h3>
+                <div id="satisfiedCustomersCount">0</div>
+                Satisfied Customer
+                <div class="btn2">
+                    <a href="#menu"><button>Menu</button></a>
+                    <a href="#booknow"><button>Book Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="owner" id="owner">
+            <h2>Owner</h2>
+            <div class="ownersection container">
+                <div class="owenerDetail">
+                    <h4>Vivek Maharaj</h4>
+                    <p>description</p>
+                    <button>About Us</button>
+                </div>
+                <div class="ownerPhoto">
+                    <img src="#" alt="Owner Image">
+                </div>
+            </div>
+        </div>
+        <div class="restuarant" id="restuarant">
+            <h2>Restuarant</h2>
+            <div class="restaurantsection container">
+                <div class="restaurantPhoto">
+                    <img src="#" alt="Restuarant Image">
+                </div>
+                <div class="restaurantDetail">
+                    <p>We have Restuarant of Dalbati & Chholepuri</p>
+                    <button>About Us</button>
+                </div>
+            </div>
+        </div>
+        <div class="sweets" id="sweets">
+            <h2>Sweets</h2>
+            <div class="sweetsection container">
+                <div class="sweetDetail">
+                    <p>We sell sweets on order.........</p>
+                    <button>About Us</button>
+                </div>
+                <div class="ownerPhoto">
+                    <img src="#" alt="Owner Image">
+                </div>
+            </div>
+        </div>
+    </body>
+<!--    <script src="./js/index.js"></script>-->
+<script src="{% static 'js/index.js' %}"></script>
+
+</html>
